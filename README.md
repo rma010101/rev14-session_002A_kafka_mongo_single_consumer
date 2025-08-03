@@ -58,7 +58,7 @@ C:\kafka\kafka_2.13-3.9.1\bin\windows\kafka-topics.bat --create --topic <OWN-TOP
 > **Note:** Replace `<OWN-TOPIC>` with your actual topic name. This name must be exactly the same as the topic used in your `producer.js` and `consumer.js` files (e.g., `my-order-updates`).
 
 
-#### Example: Where to Set the Topic Name
+#### OR
 
 **In `producer.js`:**
 ```js
