@@ -52,7 +52,7 @@ C:\kafka\kafka_2.13-3.9.1\bin\windows\kafka-server-start.bat C:\kafka\kafka_2.13
 
 ### 3. Create Kafka Topic
 ```
-C:\kafka\kafka_2.13-3.9.1\bin\windows\kafka-topics.bat --create --topic my-order-updates --bootstrap-server localhost:9092
+C:\kafka\kafka_2.13-3.9.1\bin\windows\kafka-topics.bat --create --topic <OWN-TOPIC> --bootstrap-server localhost:9092
 ```
 
 ### 4. Install Node.js Dependencies
