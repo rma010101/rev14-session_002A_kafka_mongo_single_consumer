@@ -55,6 +55,8 @@ C:\kafka\kafka_2.13-3.9.1\bin\windows\kafka-server-start.bat C:\kafka\kafka_2.13
 C:\kafka\kafka_2.13-3.9.1\bin\windows\kafka-topics.bat --create --topic <OWN-TOPIC> --bootstrap-server localhost:9092
 ```
 
+> **Note:** Replace `<OWN-TOPIC>` with your actual topic name. This name must be exactly the same as the topic used in your `producer.js` and `consumer.js` files (e.g., `my-order-updates`).
+
 
 ### 4. Run the Producer
 ```
