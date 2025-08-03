@@ -4,13 +4,20 @@ This project demonstrates how to use Apache Kafka with Node.js, MongoDB, and Red
 
 ## Node.js Dependencies & Installation
 
+
 This project requires the following Node.js packages:
 
 - `kafka-node` – Kafka client for Node.js
 - `mongodb` – MongoDB client for Node.js
 - `redis` – Redis client for Node.js
 
-To install all dependencies, run:
+If you do not have a `package.json` file, first initialize your project:
+
+```
+npm init -y
+```
+
+Then install all dependencies:
 
 ```
 npm install kafka-node mongodb redis
