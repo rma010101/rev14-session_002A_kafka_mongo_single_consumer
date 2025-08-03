@@ -55,17 +55,13 @@ C:\kafka\kafka_2.13-3.9.1\bin\windows\kafka-server-start.bat C:\kafka\kafka_2.13
 C:\kafka\kafka_2.13-3.9.1\bin\windows\kafka-topics.bat --create --topic <OWN-TOPIC> --bootstrap-server localhost:9092
 ```
 
-### 4. Install Node.js Dependencies
-```
-npm install
-```
 
-### 5. Run the Producer
+### 4. Run the Producer
 ```
 node producer.js
 ```
 
-### 6. Run the Consumer
+### 5. Run the Consumer
 ```
 
 node consumer.js
