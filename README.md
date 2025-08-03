@@ -100,6 +100,5 @@ node consumer.js
 - How to set up and run Kafka and ZooKeeper on Windows.
 - How to produce and consume messages with `kafka-node` in Node.js.
 - How to integrate MongoDB and Redis for data storage and caching.
-- How to resolve common Kafka startup errors (e.g., cluster ID mismatch).
 
 ---
