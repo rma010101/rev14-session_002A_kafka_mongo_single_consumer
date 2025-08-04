@@ -1,0 +1,17 @@
+{
+  "name": "session_002b_kafka_mongodb_single_consumer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "kafka-node": "^5.0.0",
+    "mongodb": "^6.18.0",
+    "redis": "^5.7.0"
+  }
+}
