@@ -99,10 +99,31 @@ node consumer.js
 > **Important:** This project demonstrates a **single consumer** architecture. One consumer processes all messages from the Kafka topic.
 
 ### 8. Run the Producer
+
+You have **two options** for sending messages to the Kafka topic:
+
+#### Option A: Node.js Producer (Recommended)
 ```
-# Terminal 5 - Start producer (in a new terminal)
+# Terminal 5 - Start Node.js producer (in a new terminal)
 node producer.js
 ```
+
+This runs your custom Node.js application that automatically sends structured order messages with JSON data (orderId, productId, quantity).
+
+#### Option B: Kafka Console Producer (Alternative/Manual Testing)
+If you prefer to send messages manually or want to test without the Node.js producer:
+
+```
+# Terminal 5 (Alternative) - Manual console producer
+cd C:\kafka\kafka_2.13-3.9.1\bin\windows
+kafka-console-producer.bat --topic my-order-updates --bootstrap-server localhost:9092
+
+# Then type JSON messages manually in the terminal, for example:
+{"orderId": "order-123", "productId": "product-456", "quantity": 2}
+{"orderId": "order-124", "productId": "product-789", "quantity": 1}
+```
+
+> **Choose one option**: Use either the Node.js producer OR the console producer, not both simultaneously.
 
 The producer will send messages, and you'll see the console consumer displaying the raw messages FIRST, then the Node.js consumer processing those messages, demonstrating complete message flow visibility.
 
@@ -114,7 +135,9 @@ For the full single consumer demonstration with monitoring, you'll need **5 term
 2. **Terminal 2**: Kafka Server (`kafka-server-start.bat`)  
 3. **Terminal 3**: Console Consumer Monitor (`kafka-console-consumer.bat`)
 4. **Terminal 4**: Node.js Consumer (`node consumer.js`)
-5. **Terminal 5**: Producer (`node producer.js`)
+5. **Terminal 5**: Producer - Choose one:
+   - **Option A**: Node.js Producer (`node producer.js`) - Recommended
+   - **Option B**: Console Producer (`kafka-console-producer.bat`) - Manual testing
 
 > **Recommended Order**: Start monitoring console consumer (3) before Node.js consumer (4) to capture all messages from the beginning.
 
@@ -179,6 +202,17 @@ C:\kafka\kafka_2.13-3.9.1\bin\windows\kafka-consumer-groups.bat --bootstrap-serv
 
 # Describe topic details
 C:\kafka\kafka_2.13-3.9.1\bin\windows\kafka-topics.bat --describe --topic my-order-updates --bootstrap-server localhost:9092
+```
+
+#### Manual Message Production Commands
+```bash
+# Start console producer for manual message sending
+C:\kafka\kafka_2.13-3.9.1\bin\windows\kafka-console-producer.bat --topic my-order-updates --bootstrap-server localhost:9092
+
+# Example messages to type in console producer:
+{"orderId": "order-001", "productId": "product-123", "quantity": 3}
+{"orderId": "order-002", "productId": "product-456", "quantity": 1}
+{"orderId": "order-003", "productId": "product-789", "quantity": 5}
 ```
 
 ### MongoDB Logs
